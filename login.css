@@ -1,0 +1,100 @@
+/* General styling for body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #F7E8D8; /* Light pastel background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the entire page */
+.login-container {
+    display: flex;
+    width: 80%;
+    height: 70%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side - image and text */
+.login-left {
+    flex: 1;
+    background-color: #F8C6A5; /* Light orange */
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    padding: 40px;
+}
+
+.login-left img {
+    max-width: 80%;
+    margin-top: 20px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+/* Right side - login form */
+.login-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-right h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.login-right p {
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.textbox input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+}
+
+.textbox input:focus {
+    border: 1px solid #5c5c5c;
+    background-color: #f1f1f1;
+}
+
+/* Login button */
+.login-btn {
+    background-color: #A24936; /* Dark brown */
+    color: white;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #8f3d28;
+}
+
+/* Remember me checkbox */
+.remember-me {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}

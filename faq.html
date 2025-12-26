@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ProLingua - FAQ</title>
+    <meta name="description" content="Pertanyaan yang sering diajukan tentang kursus Bahasa Inggris ProLingua.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+  </head>
+
+  <body class="pl-page">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark pl-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">ProLingua English</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="pricing.html">Paket</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            <li class="nav-item"><a class="nav-link" href="testimoni.html">Testimoni</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="py-5 faq-hero">
+      <div class="container section-heading text-center">
+        <small>Informasi Cepat</small>
+        <h1 class="display-5 fw-bold mb-2">FAQ ProLingua</h1>
+        <p class="mb-0">
+          Cari jawaban lebih cepat dengan pencarian, filter kategori, dan tombol buka/tutup semua.
+        </p>
+      </div>
+    </header>
+
+    <main class="py-5">
+      <div class="container">
+
+        <!-- Controls -->
+        <section class="controls p-4 p-md-5 mb-4">
+          <div class="row g-3 align-items-center">
+            <div class="col-lg-6">
+              <label class="form-label fw-bold mb-2" for="q">Cari pertanyaan</label>
+              <input id="q" class="form-control" placeholder="Contoh: biaya, jadwal, level, sertifikat...">
+              <div class="mt-2 d-flex flex-wrap gap-2" id="chips">
+                <span class="chip active" data-cat="all">Semua</span>
+                <span class="chip" data-cat="program">Program</span>
+                <span class="chip" data-cat="jadwal">Jadwal</span>
+                <span class="chip" data-cat="biaya">Biaya</span>
+                <span class="chip" data-cat="kelas">Kelas</span>
+                <span class="chip" data-cat="lainnya">Lainnya</span>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="d-flex flex-column flex-sm-row gap-2 justify-content-lg-end align-items-stretch align-items-sm-end h-100">
+                <button class="btn btn-pl" type="button" id="btnExpand">Buka Semua</button>
+                <button class="btn btn-outline-dark" type="button" id="btnCollapse">Tutup Semua</button>
+                <button class="btn btn-outline-dark" type="button" id="btnClear">Reset Filter</button>
+              </div>
+              <div class="mt-2 text-end">
+                <span class="fw-bold" id="count"></span>
+                <span class="text-muted" style="color: rgba(50,50,50,.72) !important;">pertanyaan tampil</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Accordion -->
+        <section class="faq-wrap">
+          <div class="accordion" id="faqAcc">
+
+            <!-- Q1 -->
+            <div class="accordion-item" data-cat="program">
+              <h2 class="accordion-header" id="h1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#c1" aria-expanded="false" aria-controls="c1">
+                  Program apa saja yang tersedia di ProLingua?
+                </button>
+              </h2>
+              <div id="c1" class="accordion-collapse collapse" aria-labelledby="h1" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  <div class="faq-meta mb-2">Kategori: Program</div>
+                  Kami menyediakan program sesuai level (pemula sampai lanjutan) dengan fokus praktik
+                  speaking, listening, pronunciation, serta penguatan grammar secara terarah.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="accordion-item" data-cat="jadwal">
+              <h2 class="accordion-header" id="h2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+                  Bagaimana jadwal kelasnya?
+                </button>
+              </h2>
+              <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  <div class="faq-meta mb-2">Kategori: Jadwal</div>
+                  Jadwal bersifat fleksibel dan mengikuti ketersediaan kelas. Anda dapat menghubungi admin
+                  untuk melihat slot terbaru dan menyesuaikan dengan aktivitas sekolah.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="accordion-item" data-cat="biaya">
+              <h2 class="accordion-header" id="h3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+                  Berapa biaya kursusnya?
+                </button>
+              </h2>
+              <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  <div class="faq-meta mb-2">Kategori: Biaya</div>
+                  Biaya bergantung pada paket dan durasi program. Silakan lihat halaman Paket atau hubungi kami
+                  untuk rekomendasi paket yang paling sesuai dengan target belajar Anda.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="accordion-item" data-cat="kelas">
+              <h2 class="accordion-header" id="h4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+                  Apakah ada kelas privat?
+                </button>
+              </h2>
+              <div id="c4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  <div class="faq-meta mb-2">Kategori: Kelas</div>
+                  Ada. Kelas privat cocok untuk target spesifik (misalnya speaking confidence, persiapan ujian,
+                  atau kebutuhan tertentu). Jadwal dapat disepakati bersama.
+                </div>
+              </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="accordion-item" data-cat="lainnya">
+              <h2 class="accordion-header" id="h5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+                  Apakah ada evaluasi dan laporan perkembangan?
+                </button>
+              </h2>
+              <div id="c5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#faqAcc">
+                <div class="accordion-body">
+                  <div class="faq-meta mb-2">Kategori: Lainnya</div>
+                  Ya. Evaluasi dilakukan berkala agar progres terukur. Anda juga bisa meminta ringkasan perkembangan
+                  untuk memantau kemampuan yang meningkat dan area yang perlu diperkuat.
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="empty-state d-none" id="empty">
+            Tidak ada pertanyaan yang cocok dengan filter Anda.
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="text-center mt-5">
+          <a href="kontak.html" class="btn btn-pl btn-lg">Masih bingung? Hubungi kami</a>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 pl-footer">
+      <div class="container text-center">
+        <small>&copy; 2025 ProLingua English. All rights reserved.</small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      (function(){
+        const q = document.getElementById('q');
+        const chips = document.getElementById('chips');
+        const items = Array.from(document.querySelectorAll('.accordion-item'));
+        const count = document.getElementById('count');
+        const empty = document.getElementById('empty');
+        const acc = document.getElementById('faqAcc');
+
+        // Store original title/body (for highlight reset)
+        items.forEach(it=>{
+          const btn = it.querySelector('.accordion-button');
+          const body = it.querySelector('.accordion-body');
+          it.dataset.titleRaw = btn.textContent.trim();
+          it.dataset.bodyRaw = body.textContent.trim();
+        });
+
+        let activeCat = 'all';
+
+        function escapeRegExp(s){ return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+        function highlight(el, term){
+          // reset first
+          const it = el.closest('.accordion-item');
+          const btn = it.querySelector('.accordion-button');
+          const body = it.querySelector('.accordion-body');
+          btn.textContent = it.dataset.titleRaw;
+          body.textContent = it.dataset.bodyRaw;
+
+          if(!term) return;
+
+          const re = new RegExp('(' + escapeRegExp(term) + ')', 'ig');
+
+          // Rebuild with mark for title
+          const title = it.dataset.titleRaw.replace(re, '<mark>$1</mark>');
+          btn.innerHTML = title;
+
+          // Rebuild with mark for body
+          const rawBody = it.dataset.bodyRaw;
+          body.innerHTML = rawBody.replace(re, '<mark>$1</mark>');
+        }
+
+        function matchItem(it, term){
+          const catOk = (activeCat === 'all') || (it.dataset.cat === activeCat);
+          if(!catOk) return false;
+          if(!term) return true;
+          const t = (it.dataset.titleRaw || '').toLowerCase();
+          const b = (it.dataset.bodyRaw || '').toLowerCase();
+          return t.includes(term) || b.includes(term);
+        }
+
+        function apply(){
+          const term = (q.value || '').trim().toLowerCase();
+          let visible = 0;
+
+          items.forEach(it=>{
+            const ok = matchItem(it, term);
+            it.classList.toggle('d-none', !ok);
+            if(ok){
+              visible++;
+              highlight(it, term);
+            }else{
+              highlight(it, '');
+            }
+          });
+
+          count.textContent = String(visible);
+          empty.classList.toggle('d-none', visible !== 0);
+
+          // If many filtered out, collapse all to avoid confusing open states
+          if(term || activeCat !== 'all') collapseAll();
+        }
+
+        function expandAll(){
+          items.filter(it=>!it.classList.contains('d-none')).forEach(it=>{
+            const collapse = it.querySelector('.accordion-collapse');
+            bootstrap.Collapse.getOrCreateInstance(collapse, { toggle:false }).show();
+          });
+        }
+
+        function collapseAll(){
+          items.forEach(it=>{
+            const collapse = it.querySelector('.accordion-collapse');
+            bootstrap.Collapse.getOrCreateInstance(collapse, { toggle:false }).hide();
+          });
+        }
+
+        // Chips
+        chips.querySelectorAll('.chip').forEach(ch=>{
+          ch.addEventListener('click', ()=>{
+            chips.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+            ch.classList.add('active');
+            activeCat = ch.dataset.cat || 'all';
+            apply();
+          });
+        });
+
+        // Search
+        q.addEventListener('input', apply);
+
+        // Buttons
+        document.getElementById('btnExpand').addEventListener('click', expandAll);
+        document.getElementById('btnCollapse').addEventListener('click', collapseAll);
+        document.getElementById('btnClear').addEventListener('click', ()=>{
+          q.value = '';
+          activeCat = 'all';
+          chips.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+          chips.querySelector('[data-cat="all"]')?.classList.add('active');
+          apply();
+        });
+
+        // init
+        apply();
+      })();
+    </script>
+  </body>
+</html>

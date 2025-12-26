@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - English Course</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-box">
+      <!-- HEADER -->
+      <header class="dashboard-header">
+        <div class="header-left">
+          <h2>English Course Dashboard</h2>
+          <p class="subtitle">Welcome, <span id="studentName" class="highlight">Student</span></p>
+        </div>
+        <div class="header-right">
+          <div class="control">
+            <label for="monthSelect">Select Month</label>
+            <select id="monthSelect"></select>
+          </div>
+          <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+      </header>
+
+      <!-- PROFILE & STATS -->
+      <section class="top-grid">
+        <!-- Profile Card without Avatar -->
+        <div class="profile-card">
+          <div class="profile-meta">
+            <div class="profile-name" id="profileName">Student</div>
+            <div class="profile-sub">
+              <span id="profileClass">-</span> • <span id="profileUsername">-</span>
+            </div>
+            <div class="profile-note" id="profileNote">Latest Monthly Summary</div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-container">
+          <div class="stat-box">
+            <i class="fa fa-trophy"></i>
+            <h3>Monthly Score</h3>
+            <p id="scoreText">-</p>
+          </div>
+          <div class="stat-box">
+            <i class="fa fa-check-circle"></i>
+            <h3>Attendance</h3>
+            <p id="attendanceText">-</p>
+          </div>
+          <div class="stat-box">
+            <i class="fa fa-star"></i>
+            <h3>Notes</h3>
+            <p id="notesText">-</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tables -->
+      <section class="tables-grid">
+        <div class="monthly-report">
+          <h3>Monthly Progress</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Score</th>
+                <th>Attendance</th>
+                <th>Achievement</th>
+              </tr>
+            </thead>
+            <tbody id="progressBody"></tbody>
+          </table>
+        </div>
+        <p class="status" id="statusText"></p>
+      </section>
+    </div>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

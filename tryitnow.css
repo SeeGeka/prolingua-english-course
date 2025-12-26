@@ -1,0 +1,233 @@
+/* ==========================================================
+   ProLingua Quiz Theme
+   Palette:
+   - Cream: #DDD0C8
+   - Dark:  #323232
+   ========================================================== */
+
+:root{
+  --cream: #DDD0C8;
+  --dark:  #323232;
+
+  /* Derived */
+  --cream-92: rgba(221, 208, 200, 0.92);
+  --cream-80: rgba(221, 208, 200, 0.80);
+  --cream-65: rgba(221, 208, 200, 0.65);
+  --cream-18: rgba(221, 208, 200, 0.18);
+
+  --dark-10: rgba(50, 50, 50, 0.10);
+  --dark-18: rgba(50, 50, 50, 0.18);
+  --dark-24: rgba(50, 50, 50, 0.24);
+  --dark-30: rgba(50, 50, 50, 0.30);
+
+  --radius-xl: 28px;
+  --radius-md: 14px;
+}
+
+/* Base */
+html, body{
+  height: 100%;
+}
+
+body.prolingua-quiz{
+  background: var(--cream);
+  color: var(--dark);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Bootstrap helpers (scoped via our page context where possible) */
+#quiz-page{
+  min-height: calc(100vh - 120px);
+}
+
+/* Navbar */
+.navbar.bg-dark{
+  background: var(--dark) !important;
+  border-color: var(--dark-24) !important;
+}
+
+.navbar.navbar-dark .navbar-brand{
+  color: var(--cream) !important;
+  letter-spacing: 0.2px;
+}
+
+.navbar.navbar-dark .nav-link{
+  color: var(--cream-80) !important;
+  font-weight: 600;
+  opacity: 0.92;
+}
+
+.navbar.navbar-dark .nav-link:hover{
+  color: var(--cream) !important;
+  opacity: 1;
+}
+
+.navbar.navbar-dark .nav-link.active{
+  color: var(--cream) !important;
+  opacity: 1;
+}
+
+/* Main card */
+.quiz-card{
+  background: var(--dark);
+  color: var(--cream);
+  border: 1px solid var(--cream-18);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 18px 46px var(--dark-24);
+}
+
+.quiz-card .h3,
+.quiz-card .h5,
+.quiz-card h1,
+.quiz-card h2,
+.quiz-card label{
+  color: var(--cream);
+}
+
+.text-muted-soft{
+  color: var(--cream-65) !important;
+}
+
+hr.border-secondary{
+  border-color: var(--cream-18) !important;
+  opacity: 1;
+}
+
+/* Level selector buttons (only the level buttons, not submit button) */
+button[data-level].btn{
+  border-radius: 999px;
+  font-weight: 800;
+  padding: 0.75rem 1rem;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease, color 140ms ease, border-color 140ms ease, opacity 140ms ease;
+}
+
+/* not selected */
+button[data-level].btn-outline-light{
+  color: var(--cream) !important;
+  border-color: rgba(221, 208, 200, 0.45) !important;
+  background: transparent !important;
+}
+
+button[data-level].btn-outline-light:hover{
+  background: rgba(221, 208, 200, 0.10) !important;
+  transform: translateY(-1px);
+}
+
+/* selected */
+button[data-level].btn-primary{
+  background: var(--cream) !important;
+  color: var(--dark) !important;
+  border: 1px solid rgba(221, 208, 200, 0.70) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+button[data-level].btn-primary:hover{
+  transform: translateY(-1px);
+}
+
+/* Question blocks */
+#quizForm .mb-3 > p{
+  color: var(--cream);
+  font-weight: 700;
+}
+
+/* Options */
+.quiz-option{
+  background: var(--cream-92);
+  border: 1px solid rgba(50, 50, 50, 0.28);
+  border-radius: var(--radius-md);
+  padding: 0.55rem 0.75rem;
+  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+.quiz-option:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+  border-color: rgba(50, 50, 50, 0.42);
+}
+
+.quiz-option label{
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  color: var(--dark);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.quiz-option input[type="radio"]{
+  margin-top: 0.25rem;
+  accent-color: var(--dark);
+  flex: 0 0 auto;
+}
+
+.option-body{
+  color: var(--dark);
+  line-height: 1.35;
+}
+
+/* Submit button (and any primary button except level buttons) */
+#quizForm .btn.btn-primary{
+  background: var(--dark) !important;
+  border-color: var(--dark) !important;
+  color: var(--cream) !important;
+  border-radius: 999px;
+  font-weight: 900;
+  padding: 0.85rem 1.6rem;
+  box-shadow: 0 14px 34px var(--dark-30);
+  transition: transform 140ms ease, box-shadow 140ms ease, filter 140ms ease;
+}
+
+#quizForm .btn.btn-primary:hover{
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px var(--dark-30);
+}
+
+#quizForm .btn.btn-primary:focus-visible{
+  outline: 3px solid rgba(221, 208, 200, 0.45);
+  outline-offset: 2px;
+}
+
+/* Result box */
+#resultBox.alert.alert-dark{
+  background: rgba(221, 208, 200, 0.10) !important;
+  color: var(--cream) !important;
+  border-color: var(--cream-18) !important;
+  border-radius: 18px;
+}
+
+#resultBox .h5{
+  color: var(--cream) !important;
+}
+
+#resultText{
+  color: var(--cream-80) !important;
+}
+
+/* Footer */
+footer.bg-dark{
+  background: var(--dark) !important;
+  border-color: var(--dark-24) !important;
+}
+
+footer .text-secondary{
+  color: var(--cream-65) !important;
+}
+
+/* Small responsive improvements */
+@media (max-width: 576px){
+  .quiz-card{
+    border-radius: 22px;
+  }
+  button[data-level].btn{
+    padding: 0.7rem 0.9rem;
+  }
+  .quiz-option{
+    padding: 0.55rem 0.7rem;
+  }
+  .quiz-option:hover{
+    transform: none;
+    box-shadow: none;
+  }
+}

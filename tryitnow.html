@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ProLingua - Quiz</title>
+    <meta name="description" content="Latihan soal Bahasa Inggris untuk SD, SMP, SMA/SMK di ProLingua. Pilih tingkat kelas lalu kerjakan kuis.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="tryitnow.css">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+</head>
+
+  <body class="prolingua-quiz">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">ProLingua English</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#hero">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#pricing">Paket</a></li>
+            <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+            <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HALAMAN KUIS -->
+    <main id="quiz-page" class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="quiz-card p-4 p-md-5">
+              <!-- Header -->
+              <div class="mb-4 text-center">
+                <h1 class="h3 fw-bold mb-2">Kuis Bahasa Inggris</h1>
+                <p class="text-muted-soft mb-0">
+                  Pilih tingkat kelas terlebih dulu, lalu jawab 10 soal di bawah ini.
+                </p>
+              </div>
+
+              <!-- Pilihan kelas -->
+              <div class="mb-4">
+                <label class="form-label fw-semibold">Pilih tingkat kelas</label>
+                <div class="row g-2">
+                  <div class="col-4">
+                    <button type="button" class="btn w-100 btn-outline-light" data-level="sd">SD</button>
+                  </div>
+                  <div class="col-4">
+                    <button type="button" class="btn w-100 btn-outline-light" data-level="smp">SMP</button>
+                  </div>
+                  <div class="col-4">
+                    <button type="button" class="btn w-100 btn-outline-light" data-level="sma">SMA/SMK</button>
+                  </div>
+                </div>
+                <small class="d-block mt-2 text-muted-soft" id="levelInfo">
+                  Belum memilih kelas.
+                </small>
+              </div>
+
+              <hr class="border-secondary">
+
+              <!-- Soal -->
+              <form id="quizForm">
+                <!-- ===== Soal SD ===== -->
+                <div class="quiz-level" data-level="sd" style="display:none;">
+                  <h2 class="h5 mb-3">Soal SD</h2>
+
+                  <!-- Q1 -->
+                  <div class="mb-3">
+                    <p class="mb-2">1. Choose the correct answer: I ___ a student.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q1" value="a"><div class="option-body">a. am</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q1" value="b"><div class="option-body">b. is</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q1" value="c"><div class="option-body">c. are</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q2 -->
+                  <div class="mb-3">
+                    <p class="mb-2">2. What is the English word for “buku”?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q2" value="a"><div class="option-body">a. pen</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q2" value="b"><div class="option-body">b. book</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q2" value="c"><div class="option-body">c. bag</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q3 -->
+                  <div class="mb-3">
+                    <p class="mb-2">3. Fill in the blank: Good ___, teacher! (pagi)</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q3" value="a"><div class="option-body">a. morning</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q3" value="b"><div class="option-body">b. night</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q3" value="c"><div class="option-body">c. afternoon</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q4 -->
+                  <div class="mb-3">
+                    <p class="mb-2">4. How old are you?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q4" value="a"><div class="option-body">a. I am fine</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q4" value="b"><div class="option-body">b. I am ten years old</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q4" value="c"><div class="option-body">c. I am a student</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q5 -->
+                  <div class="mb-3">
+                    <p class="mb-2">5. Choose the correct sentence:</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q5" value="a"><div class="option-body">a. She are my friend</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q5" value="b"><div class="option-body">b. She is my friend</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q5" value="c"><div class="option-body">c. She am my friend</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q6 -->
+                  <div class="mb-3">
+                    <p class="mb-2">6. What color is the sky?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q6" value="a"><div class="option-body">a. Blue</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q6" value="b"><div class="option-body">b. Green</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q6" value="c"><div class="option-body">c. Black</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q7 -->
+                  <div class="mb-3">
+                    <p class="mb-2">7. Count and choose the right answer: 5 + 3 = ___</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q7" value="a"><div class="option-body">a. seven</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q7" value="b"><div class="option-body">b. eight</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q7" value="c"><div class="option-body">c. nine</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q8 -->
+                  <div class="mb-3">
+                    <p class="mb-2">8. My father is a ___. He teaches students.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q8" value="a"><div class="option-body">a. doctor</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q8" value="b"><div class="option-body">b. teacher</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q8" value="c"><div class="option-body">c. farmer</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q9 -->
+                  <div class="mb-3">
+                    <p class="mb-2">9. Choose the correct greeting for the night:</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q9" value="a"><div class="option-body">a. Good morning</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q9" value="b"><div class="option-body">b. Good afternoon</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q9" value="c"><div class="option-body">c. Good night</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q10 -->
+                  <div class="mb-3">
+                    <p class="mb-2">10. Arrange the words into a good sentence: like – I – apples</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q10" value="a"><div class="option-body">a. Like I apples</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sd-q10" value="b"><div class="option-body">b. I like apples</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sd-q10" value="c"><div class="option-body">c. Apples like I</div></label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===== Soal SMP ===== -->
+                <div class="quiz-level" data-level="smp" style="display:none;">
+                  <h2 class="h5 mb-3">Soal SMP</h2>
+
+                  <!-- Q1 -->
+                  <div class="mb-3">
+                    <p class="mb-2">1. Fill in the blank: She ___ to school every day.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q1" value="a"><div class="option-body">a. go</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q1" value="b"><div class="option-body">b. goes</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q1" value="c"><div class="option-body">c. going</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q2 -->
+                  <div class="mb-3">
+                    <p class="mb-2">2. Choose the correct pronoun: My brother is kind. ___ is twelve years old.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q2" value="a"><div class="option-body">a. He</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q2" value="b"><div class="option-body">b. She</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q2" value="c"><div class="option-body">c. They</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q3 -->
+                  <div class="mb-3">
+                    <p class="mb-2">3. Which sentence is correct?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q3" value="a"><div class="option-body">a. I don’t likes coffee</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q3" value="b"><div class="option-body">b. I doesn’t like coffee</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q3" value="c"><div class="option-body">c. I don’t like coffee</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q4 -->
+                  <div class="mb-3">
+                    <p class="mb-2">4. What is the main purpose of a descriptive text?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q4" value="a"><div class="option-body">a. To tell a story</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q4" value="b"><div class="option-body">b. To describe a person or thing</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q4" value="c"><div class="option-body">c. To give instructions</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q5 -->
+                  <div class="mb-3">
+                    <p class="mb-2">5. Fill in the blank: We ___ English on Monday.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q5" value="a"><div class="option-body">a. study</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q5" value="b"><div class="option-body">b. studies</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q5" value="c"><div class="option-body">c. studied</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q6 -->
+                  <div class="mb-3">
+                    <p class="mb-2">6. Choose the correct answer: My hobby is ___.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q6" value="a"><div class="option-body">a. reading books</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q6" value="b"><div class="option-body">b. read books</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q6" value="c"><div class="option-body">c. reads books</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q7 -->
+                  <div class="mb-3">
+                    <p class="mb-2">7. Arrange the words into a good sentence: every – football – play – I – Sunday</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q7" value="a"><div class="option-body">a. Every Sunday football I play</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q7" value="b"><div class="option-body">b. I play football every Sunday</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q7" value="c"><div class="option-body">c. I every Sunday play football</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q8 -->
+                  <div class="mb-3">
+                    <p class="mb-2">8. What does “beautiful” mean?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q8" value="a"><div class="option-body">a. jelek</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q8" value="b"><div class="option-body">b. indah</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q8" value="c"><div class="option-body">c. besar</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q9 -->
+                  <div class="mb-3">
+                    <p class="mb-2">9. Choose the correct sentence for an introduction:</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q9" value="a"><div class="option-body">a. How old are you?</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q9" value="b"><div class="option-body">b. Nice to meet you</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q9" value="c"><div class="option-body">c. Where do you live?</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q10 -->
+                  <div class="mb-3">
+                    <p class="mb-2">10. Fill in the blank: There ___ two cats in the yard.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q10" value="a"><div class="option-body">a. is</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="smp-q10" value="b"><div class="option-body">b. are</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="smp-q10" value="c"><div class="option-body">c. was</div></label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===== Soal SMA/SMK ===== -->
+                <div class="quiz-level" data-level="sma" style="display:none;">
+                  <h2 class="h5 mb-3">Soal SMA / SMK</h2>
+
+                  <!-- Q1 -->
+                  <div class="mb-3">
+                    <p class="mb-2">1. Choose the correct sentence:</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q1" value="a"><div class="option-body">a. She has finished her homework</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q1" value="b"><div class="option-body">b. She finish her homework</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q1" value="c"><div class="option-body">c. She finishing her homework</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q2 -->
+                  <div class="mb-3">
+                    <p class="mb-2">2. Fill in the blank: If I have time, I ___ help you.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q2" value="a"><div class="option-body">a. will</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q2" value="b"><div class="option-body">b. did</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q2" value="c"><div class="option-body">c. was</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q3 -->
+                  <div class="mb-3">
+                    <p class="mb-2">3. What is the purpose of an announcement text?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q3" value="a"><div class="option-body">a. To entertain readers</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q3" value="b"><div class="option-body">b. To give information</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q3" value="c"><div class="option-body">c. To tell personal experience</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q4 -->
+                  <div class="mb-3">
+                    <p class="mb-2">4. Choose the correct modal verb: Students ___ wear uniforms at school.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q4" value="a"><div class="option-body">a. must</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q4" value="b"><div class="option-body">b. may</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q4" value="c"><div class="option-body">c. could</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q5 -->
+                  <div class="mb-3">
+                    <p class="mb-2">5. Identify the tense: “They were studying when I arrived.”</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q5" value="a"><div class="option-body">a. Simple Past</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q5" value="b"><div class="option-body">b. Past Continuous</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q5" value="c"><div class="option-body">c. Present Perfect</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q6 -->
+                  <div class="mb-3">
+                    <p class="mb-2">6. Choose the correct sentence:</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q6" value="a"><div class="option-body">a. He is more tall than me</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q6" value="b"><div class="option-body">b. He is taller than me</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q6" value="c"><div class="option-body">c. He is tallest than me</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q7 -->
+                  <div class="mb-3">
+                    <p class="mb-2">7. Fill in the blank: This novel is ___ interesting than that one.</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q7" value="a"><div class="option-body">a. very</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q7" value="b"><div class="option-body">b. more</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q7" value="c"><div class="option-body">c. most</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q8 -->
+                  <div class="mb-3">
+                    <p class="mb-2">8. What does the word “environment” relate to?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q8" value="a"><div class="option-body">a. Technology</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q8" value="b"><div class="option-body">b. Nature</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q8" value="c"><div class="option-body">c. Education</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q9 -->
+                  <div class="mb-3">
+                    <p class="mb-2">9. Choose the correct indirect speech: She said, “I am tired.”</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q9" value="a"><div class="option-body">a. She said that she is tired</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q9" value="b"><div class="option-body">b. She said that she was tired</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q9" value="c"><div class="option-body">c. She said that I was tired</div></label>
+                    </div>
+                  </div>
+
+                  <!-- Q10 -->
+                  <div class="mb-3">
+                    <p class="mb-2">10. What is the main idea of a text?</p>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q10" value="a"><div class="option-body">a. The supporting details</div></label>
+                    </div>
+                    <div class="quiz-option mb-1">
+                      <label><input type="radio" name="sma-q10" value="b"><div class="option-body">b. The title</div></label>
+                    </div>
+                    <div class="quiz-option">
+                      <label><input type="radio" name="sma-q10" value="c"><div class="option-body">c. The central message of the text</div></label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tombol submit -->
+                <div class="mt-4 d-flex justify-content-between align-items-center">
+                  <small class="text-muted-soft">
+                    Jawab semua pertanyaan, lalu klik “Cek Nilai”.
+                  </small>
+                  <button type="submit" class="btn btn-primary">
+                    Cek Nilai
+                  </button>
+                </div>
+              </form>
+
+              <!-- Hasil -->
+              <div id="resultBox" class="alert alert-dark border mt-4 mb-0" role="alert">
+                <h2 class="h5 mb-1">Hasil Kuis</h2>
+                <p class="mb-0" id="resultText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-4 border-top border-secondary bg-dark">
+      <div class="container text-center">
+        <small class="text-secondary">
+          &copy; 2025 ProLingua English. All rights reserved.
+        </small>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script kuis -->
+    <script>
+      const levelButtons = document.querySelectorAll('[data-level]');
+      const levelSections = document.querySelectorAll('.quiz-level');
+      const levelInfo = document.getElementById('levelInfo');
+      const quizForm = document.getElementById('quizForm');
+      const resultBox = document.getElementById('resultBox');
+      const resultText = document.getElementById('resultText');
+
+      // jawaban benar
+      const answers = {
+        sd:  {
+          'sd-q1': 'a',
+          'sd-q2': 'b',
+          'sd-q3': 'a',
+          'sd-q4': 'b',
+          'sd-q5': 'b',
+          'sd-q6': 'a',
+          'sd-q7': 'b',
+          'sd-q8': 'b',
+          'sd-q9': 'c',
+          'sd-q10': 'b'
+        },
+        smp: {
+          'smp-q1': 'b',
+          'smp-q2': 'a',
+          'smp-q3': 'c',
+          'smp-q4': 'b',
+          'smp-q5': 'a',
+          'smp-q6': 'a',
+          'smp-q7': 'b',
+          'smp-q8': 'b',
+          'smp-q9': 'b',
+          'smp-q10': 'b'
+        },
+        sma: {
+          'sma-q1': 'a',
+          'sma-q2': 'a',
+          'sma-q3': 'b',
+          'sma-q4': 'a',
+          'sma-q5': 'b',
+          'sma-q6': 'b',
+          'sma-q7': 'b',
+          'sma-q8': 'b',
+          'sma-q9': 'b',
+          'sma-q10': 'c'
+        }
+      };
+
+      let currentLevel = null;
+
+      // pilih level
+      levelButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentLevel = btn.getAttribute('data-level');
+
+          // style tombol
+          levelButtons.forEach(b => b.classList.remove('btn-primary'));
+          levelButtons.forEach(b => b.classList.add('btn-outline-light'));
+          btn.classList.remove('btn-outline-light');
+          btn.classList.add('btn-primary');
+
+          // tampilkan section sesuai level
+          levelSections.forEach(sec => {
+            sec.style.display = sec.getAttribute('data-level') === currentLevel ? 'block' : 'none';
+          });
+
+          // reset hasil
+          resultBox.style.display = 'none';
+          resultText.textContent = '';
+
+          const labelMap = { sd: 'SD', smp: 'SMP', sma: 'SMA / SMK' };
+          levelInfo.textContent = 'Kamu memilih kelas ' + labelMap[currentLevel] + '.';
+        });
+      });
+
+      // submit kuis
+      quizForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        if (!currentLevel) {
+          alert('Silakan pilih kelas terlebih dulu.');
+          return;
+        }
+
+        const key = answers[currentLevel];
+        const questionNames = Object.keys(key);
+        let correct = 0;
+        let answered = 0;
+
+        questionNames.forEach(name => {
+          const selected = quizForm.querySelector('input[name="' + name + '"]:checked');
+          if (selected) {
+            answered++;
+            if (selected.value === key[name]) correct++;
+          }
+        });
+
+        if (answered < questionNames.length) {
+          alert('Masih ada soal yang belum dijawab. Silakan lengkapi dulu.');
+          return;
+        }
+
+        const total = questionNames.length;
+        const score = Math.round((correct / total) * 100);
+
+        resultText.textContent = 'Jawaban benar: ' + correct + ' dari ' + total +
+          ' soal. Skor kamu: ' + score + ' / 100.';
+        resultBox.style.display = 'block';
+      });
+    </script>
+  </body>
+</html>

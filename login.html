@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Prolingua English Course</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-left">
+            <div class="login-text">
+                <h1>Welcome to Prolingua</h1>
+                <p>Your English learning journey starts here!</p>
+            </div>
+            <img src="../assets/panda.png" alt="Skeleton with laptop">
+        </div>
+
+        <div class="login-right">
+            <h2>Login to your Account</h2>
+            <p>Access your personalized learning dashboard</p>
+            <form id="loginForm">
+                <div class="textbox">
+                    <input type="text" placeholder="Username" name="Username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe"> <label for="rememberMe">Remember Me</label>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <p id="error" style="color:red;"></p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

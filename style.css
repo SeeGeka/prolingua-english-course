@@ -1,0 +1,1194 @@
+/* ================== RESET & DASAR ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #e5e7eb;
+  background: #020617;
+}
+
+/* Container umum */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================== NAVBAR ================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #DDD0C8;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0.7rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-wrap: wrap;  <-- HAPUS di PC */
+  position: relative;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.1rem;
+  justify-content: flex-start; /* logo tetap kiri */
+}
+
+.nav-logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.nav-logo-text {
+  white-space: nowrap;    /* cegah teks turun baris */
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+  flex-basis: 100%;
+  justify-content: center; /* menu di tengah */
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-menu a {
+  font-size: 0.95rem;
+  text-decoration: none;
+  position: relative;
+  color: #000000;
+  transition: color 0.2s ease;
+}
+
+.nav-menu a.active {
+  color: #000000;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: width 0.2s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffffff;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Tombol kanan */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* flex-basis: 100%;  <-- HAPUS di PC */
+}
+
+/* CTA di navbar */
+.btn-outline,
+.btn-primary {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff;
+  color: #000000;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #ffffff;
+}
+
+.btn-primary {
+  border: none;
+  background: #000000;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 10px 24px #ffffff;
+}
+
+
+/* Hamburger (mobile) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 1rem;
+}
+
+.nav-toggle span {
+  width: 20px;
+  height: 2px;
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+/* Desktop (>=769px) */
+@media (min-width: 769px) {
+  .nav-toggle {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+  }
+  .nav-actions {
+    display: flex;
+  }
+}
+
+/* Mobile (<=768px) */
+@media (max-width: 768px) {
+  .nav-container {
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-basis: 100%;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+}
+
+/* ================== HERO ================== */
+.hero {
+  position: relative;
+  min-height: 60vh;
+  background: url("hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #ffffff;
+}
+
+.hero-inner {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  max-width: 480px;
+}
+
+.btn-daftar {
+  background: #000000;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ================== SECTION PILIHAN BELAJAR ================== */
+.learn-options {
+  padding: 4rem 1.5rem;
+  background: #DDD0C8;
+  color: #e5e7eb;
+}
+
+.lo-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.lo-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.lo-header h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+.lo-header p {
+  font-size: 0.98rem;
+  color: #737b88;
+}
+
+/* Grid kartu */
+.lo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Timer promo */
+.lo-timer {
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+  color: #e5e7eb;
+}
+
+.lo-timer-label {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #474f5c;
+  margin-bottom: 0.75rem;
+}
+
+.lo-timer-box {
+  display: inline-flex;
+  gap: 0.75rem;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: #020617;
+}
+
+.lo-timer-item {
+  min-width: 60px;
+}
+
+.lo-timer-item span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.lo-timer-item small {
+  display: block;
+  font-size: 0.75rem;
+  color: #f7f7f7;
+}
+
+.lo-timer-note {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #414a58;
+}
+
+/* Kartu paket */
+.lo-card {
+  background: #020617;
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.lo-card-popular {
+  border-color: #ffffff;
+  transform: translateY(-6px);
+}
+
+.lo-badge {
+  font-size: 0.75rem;
+  display: inline-block;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.16);
+  color: #e5e7eb;
+  margin-bottom: 0.8rem;
+}
+
+.lo-badge-popular {
+  background: rgba(34, 197, 94, 0.16);
+  color: #bbf7d0;
+}
+
+.lo-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.15rem;
+}
+
+.lo-subtitle {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 1.1rem;
+}
+
+/* Harga */
+.lo-price {
+  margin-bottom: 1.25rem;
+}
+
+.lo-price-old {
+  display: block;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.lo-price-new {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #facc15;
+}
+
+.lo-price-note {
+  display: block;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  margin-top: 0.1rem;
+}
+
+/* List benefit */
+.lo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.lo-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.lo-list li::before {
+  content: "✔";
+  font-size: 0.8rem;
+  color: #22c55e;
+  margin-top: 0.1rem;
+}
+
+/* Tombol paket */
+.lo-btn-primary,
+.lo-btn-secondary {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+}
+
+.lo-btn-primary {
+  background: linear-gradient(135deg, #22c55e, #22c55e);
+  color: #022c22;
+  font-weight: 600;
+  box-shadow: 0 14px 34px rgba(34, 197, 94, 0.32);
+}
+
+.lo-btn-primary:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 18px 38px rgba(34, 197, 94, 0.45);
+}
+
+.lo-btn-secondary {
+  margin-top: 0.6rem;
+  background: transparent;
+  border: 1px solid #4b5563;
+  color: #e5e7eb;
+}
+
+.lo-btn-secondary:hover {
+  background: #111827;
+}
+
+/* Learn options responsive */
+@media (max-width: 768px) {
+  .learn-options {
+    padding: 3rem 1.25rem;
+  }
+
+  .lo-card-popular {
+    transform: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .lo-timer-box {
+    padding: 0.5rem 1rem;
+    gap: 0.4rem;
+  }
+
+  .lo-timer-item span {
+    font-size: 1.1rem;
+  }
+}
+
+/* ================== FOOTER ================== */
+.pl-footer {
+  background: #323232;
+  color: #ffffff;
+  padding: 3rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 0.9rem;
+}
+
+.pl-footer-top {
+  max-width: 1120px;
+  margin: 0 auto 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 2rem;
+}
+
+.pl-footer-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #f9fafb;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.pl-footer-logo img {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+}
+
+.pl-footer-col p {
+  margin: 0 0 0.6rem 0;
+}
+
+.pl-footer-social {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.pl-footer-social a {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.7rem;
+  transition: all 0.18s ease;
+}
+
+.pl-footer-social a:hover {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #022c22;
+}
+
+.pl-footer-col h4 {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  margin-bottom: 0.7rem;
+}
+
+.pl-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pl-footer-col li {
+  margin-bottom: 0.35rem;
+}
+
+.pl-footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.pl-footer-col a:hover {
+  color: #e5e7eb;
+}
+
+/* Tombol konsultasi */
+.pl-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #022c22;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0.3rem 0 0.4rem;
+  box-shadow: 0 10px 26px rgba(22, 163, 74, 0.35);
+  transition: all 0.18s ease;
+}
+
+.pl-footer-btn:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 14px 32px rgba(22, 163, 74, 0.45);
+}
+
+.pl-footer-contact {
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+/* Bottom bar */
+.pl-footer-bottom {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(55, 65, 81, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: space-between;
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+/* Default: tampil di desktop */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* ===== SECTION PRICING UTAMA ===== */
+
+.pricing-section {
+  background-color: #DDD0C8;            /* krem */
+  padding: 4rem 1.5rem 4.5rem;
+}
+
+.pricing-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.pricing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #8b7a6f;
+  margin-bottom: 0.4rem;
+}
+
+.pricing-header h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: #323232;                        /* abu gelap */
+}
+
+.pricing-header p {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #5a504a;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+/* ===== TOGGLE BULANAN / TAHUNAN (PURE CSS) ===== */
+
+.pricing-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  padding: 0.25rem;
+  background-color: #d0c2b7;
+  border-radius: 999px;
+  margin: 0 auto 2.5rem;
+  border: 1px solid #b7a697;
+}
+
+.pricing-toggle input {
+  display: none;
+}
+
+.pricing-toggle label {
+  position: relative;
+  z-index: 1;
+  padding: 0.55rem 1.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #5a504a;
+  cursor: pointer;
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.pricing-toggle .badge-save {
+  background-color: #323232;
+  color: #f9fafb;
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.65rem;
+  margin-left: 0.3rem;
+}
+
+/* glider */
+.toggle-glider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: calc(50% - 6px);
+  height: calc(100% - 6px);
+  background-color: #323232;
+  border-radius: 999px;
+  transition: transform 0.25s ease;
+}
+
+/* state checked */
+#billing-monthly:checked ~ label[for="billing-monthly"],
+#billing-yearly:checked ~ label[for="billing-yearly"] {
+  color: #f9fafb;
+}
+
+#billing-yearly:checked ~ .toggle-glider {
+  transform: translateX(100%);
+}
+
+/* ===== GRID CARD ===== */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.8rem;
+}
+
+/* CARD */
+.pricing-card {
+  background-color: #f4e7dd;
+  border-radius: 18px;
+  border: 1px solid #c7b7aa;
+  padding: 1.8rem 1.6rem 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.18);
+  border-color: #323232;
+}
+
+/* badge kecil */
+.pricing-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #5a504a;
+  background-color: #e0d1c4;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.7rem;
+}
+
+/* card populer */
+.pricing-card--popular {
+  background-color: #323232;
+  border-color: #323232;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.pricing-card--popular:hover {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+/* ribbon */
+.pricing-card--popular .pricing-ribbon {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  background: linear-gradient(135deg, #facc6b, #f59e0b);
+  color: #271b09;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* teks dasar */
+.pricing-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2b2521;
+}
+
+.pricing-card--popular .pricing-name {
+  color: #f9fafb;
+}
+
+.pricing-desc {
+  margin: 0 0 1.1rem;
+  font-size: 0.9rem;
+  color: #5a504a;
+}
+
+.pricing-card--popular .pricing-desc {
+  color: #d6d3d1;
+}
+
+/* harga */
+.pricing-price-wrap {
+  margin-bottom: 1.2rem;
+}
+
+.price-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2b2521;
+}
+
+.pricing-card--popular .price-value {
+  color: #facc6b;
+}
+
+.price-caption {
+  font-size: 0.8rem;
+  color: #746860;
+}
+
+/* tag monthly/yearly */
+.price-tag {
+  display: inline-block;
+}
+
+.price-tag--yearly {
+  display: none;
+}
+
+/* saat toggle tahunan aktif */
+#billing-yearly:checked ~ .toggle-glider ~ .pricing-grid .pricing-card .price-tag--monthly {
+  display: none;
+}
+
+#billing-yearly:checked ~ .toggle-glider ~ .pricing-grid .pricing-card .price-tag--yearly {
+  display: inline-block;
+}
+
+/* fitur */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.4rem;
+  font-size: 0.86rem;
+  color: #4b413b;
+}
+
+.pricing-card--popular .pricing-features {
+  color: #f3f4f6;
+}
+
+.pricing-features li + li {
+  margin-top: 0.45rem;
+}
+
+/* ===== BUTTONS (hitam putih) ===== */
+
+.btn-main {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-main:hover {
+  background-color: #111111;
+  transform: translateY(-1px);
+  box-shadow: 0 15px 34px rgba(0, 0, 0, 0.55);
+}
+
+.pricing-card--popular .btn-main--primary {
+  background-color: #facc6b;
+  color: #2b2521;
+  box-shadow: 0 14px 32px rgba(250, 204, 107, 0.45);
+}
+
+.pricing-card--popular .btn-main--primary:hover {
+  background-color: #fbbf24;
+  box-shadow: 0 18px 40px rgba(250, 204, 107, 0.65);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 3rem 1rem 3.5rem;
+  }
+
+  .pricing-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .pricing-shell {
+    max-width: 100%;
+  }
+}
+
+/* ========= NAV RESPONSIVE ========= */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-container {
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile: sembunyikan */
+@media (max-width: 768px) {
+  .nav-actions {
+    display: none;
+  }
+}
+
+/* Footer responsive */
+@media (max-width: 900px) {
+  .pl-footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pl-footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .pl-footer {
+    padding-inline: 1.25rem;
+  }
+
+  .pl-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ============================================================
+   PROLINGUA THEME OVERRIDES (Krem #DDD0C8 + Dark #323232)
+   Tujuan: menyamakan tema index dengan halaman pricing/testimoni/quiz.
+   Catatan: Tidak mengubah teks maupun angka harga di HTML.
+   ============================================================ */
+
+:root {
+  --pl-krem: #DDD0C8;
+  --pl-krem-soft: #f4e7dd;
+  --pl-dark: #323232;
+  --pl-black: #000000;
+  --pl-white: #ffffff;
+  --pl-muted: #5a504a;
+  --pl-accent: #facc6b;
+}
+
+/* Base */
+body {
+  background: var(--pl-krem) !important;
+  color: var(--pl-dark) !important;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--pl-krem) !important;
+  box-shadow: 0 2px 10px rgba(50, 50, 50, 0.18) !important;
+}
+
+.nav-logo,
+.nav-menu a {
+  color: var(--pl-dark) !important;
+}
+
+.nav-menu a::after {
+  background: var(--pl-dark) !important;
+}
+
+.nav-menu a:hover {
+  color: var(--pl-dark) !important;
+}
+
+.nav-toggle span {
+  background: var(--pl-dark) !important;
+}
+
+.btn-outline {
+  border-color: var(--pl-dark) !important;
+  color: var(--pl-dark) !important;
+}
+
+.btn-outline:hover {
+  background: var(--pl-dark) !important;
+  color: var(--pl-white) !important;
+}
+
+.btn-primary {
+  background: var(--pl-dark) !important;
+  color: var(--pl-white) !important;
+  box-shadow: 0 12px 28px rgba(50, 50, 50, 0.22) !important;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 15px 34px rgba(50, 50, 50, 0.28) !important;
+}
+
+/* Hero CTA button */
+.btn-daftar {
+  background: var(--pl-black) !important;
+  color: var(--pl-white) !important;
+}
+
+/* Section: Learn Options */
+.learn-options {
+  background: var(--pl-krem) !important;
+  color: var(--pl-dark) !important;
+}
+
+.lo-header h2 {
+  color: var(--pl-dark) !important;
+}
+
+.lo-header p {
+  color: var(--pl-muted) !important;
+}
+
+/* Timer */
+.lo-timer {
+  color: var(--pl-dark) !important;
+}
+
+.lo-timer-label {
+  color: var(--pl-muted) !important;
+}
+
+.lo-timer-box {
+  background: var(--pl-dark) !important;
+}
+
+.lo-timer-item span,
+.lo-timer-item small {
+  color: var(--pl-white) !important;
+}
+
+.lo-timer-note {
+  color: var(--pl-muted) !important;
+}
+
+/* Cards */
+.lo-card {
+  background: var(--pl-dark) !important;
+  border-color: rgba(221, 208, 200, 0.28) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22) !important;
+}
+
+.lo-card h3 {
+  color: var(--pl-white) !important;
+}
+
+.lo-subtitle {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.lo-badge {
+  background: rgba(221, 208, 200, 0.16) !important;
+  color: var(--pl-white) !important;
+}
+
+.lo-card-popular {
+  border-color: var(--pl-accent) !important;
+}
+
+.lo-badge-popular {
+  background: var(--pl-accent) !important;
+  color: #271b09 !important;
+}
+
+/* Price */
+.lo-price-old {
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+.lo-price-new {
+  color: var(--pl-accent) !important;
+}
+
+/* List */
+.lo-list {
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.lo-list li::before {
+  color: var(--pl-accent) !important;
+}
+
+/* Buttons in cards */
+.lo-btn-primary {
+  background: var(--pl-black) !important;
+  color: var(--pl-white) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35) !important;
+}
+
+.lo-btn-primary:hover {
+  filter: brightness(1.03) !important;
+  box-shadow: 0 15px 34px rgba(0, 0, 0, 0.45) !important;
+}
+
+.lo-btn-secondary {
+  border-color: rgba(221, 208, 200, 0.55) !important;
+  color: var(--pl-white) !important;
+  background: transparent !important;
+}
+
+.lo-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Footer */
+.pl-footer {
+  background: var(--pl-dark) !important;
+  color: var(--pl-white) !important;
+  border-top-color: rgba(221, 208, 200, 0.25) !important;
+}
+
+.pl-footer-col a:hover {
+  color: var(--pl-krem) !important;
+}
+
+.pl-footer-social a {
+  border-color: rgba(221, 208, 200, 0.45) !important;
+  color: var(--pl-white) !important;
+}
+
+.pl-footer-social a:hover {
+  background: var(--pl-krem) !important;
+  border-color: var(--pl-krem) !important;
+  color: var(--pl-dark) !important;
+}
+
+.pl-footer-btn {
+  background: var(--pl-krem) !important;
+  color: var(--pl-dark) !important;
+  box-shadow: 0 10px 26px rgba(221, 208, 200, 0.28) !important;
+}
+
+.pl-footer-btn:hover {
+  filter: brightness(0.98) !important;
+  box-shadow: 0 14px 32px rgba(221, 208, 200, 0.35) !important;
+}
+
+.pl-footer-contact,
+.pl-footer-bottom {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
