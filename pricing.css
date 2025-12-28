@@ -187,6 +187,22 @@ pl-navbar{
   z-index: 1;
 }
 
+/* Hilangkan garis bawah pada CTA yang pakai <a> */
+a.btn-main,
+a.btn-main:hover,
+a.btn-main:focus,
+a.btn-main:active,
+a.btn-main:visited {
+  text-decoration: none !important;
+}
+
+/* Biar teksnya ketengah seperti tombol */
+a.btn-main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* label aktif (teks krem di atas glider) */
 #billing-monthly:checked + label{ color: var(--cream); opacity: 1; }
 #billing-yearly:checked + label{ color: var(--cream); opacity: 1; }
