@@ -1,5 +1,5 @@
  // Countdown ke 30 Januari 2026, 23:59:59 (sesuaikan kalau tahunnya beda)
-  const promoDeadline = new Date("Jan 30, 2026 23:59:59").getTime();
+  const promoDeadline = new Date(2026, 0, 5, 23, 59, 59).getTime();
 
   function updatePromoTimer() {
     const now = new Date().getTime();
